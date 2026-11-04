@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base background: Warm White #FFFBF5 */
+    --background: 38 100% 98%;
+    /* Deep warm neutral text: #2A201C */
+    --foreground: 17 20% 14%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 17 20% 14%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 17 20% 14%;
+
+    /* Primary: Brand Maroon #481D1A -> HSL(4, 47%, 19%) */
+    --primary: 4 47% 19%;
+    --primary-foreground: 38 100% 98%;
+    --primary-hover: 4 48% 15%;
+
+    /* Secondary: Warm Subtle */
+    --secondary: 25 35% 94%;
+    --secondary-foreground: 4 47% 19%;
+
+    /* Muted */
+    --muted: 28 25% 93%;
+    --muted-foreground: 20 11% 41%;
+
+    /* Accent */
+    --accent: 12 40% 93%;
+    --accent-foreground: 4 47% 19%;
+
+    /* Destructive */
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and Inputs: Light warm neutral #E7DCD3 */
+    --border: 26 25% 87%;
+    --input: 26 25% 87%;
+    --ring: 4 47% 25%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: #FFFBF5;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFBF5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CCC3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B6A79D;
+}
+
